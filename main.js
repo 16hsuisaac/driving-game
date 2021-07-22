@@ -34,46 +34,39 @@ function arrows(event) {
   if (data.carMoving === true && (event.key === 'ArrowRight' || data.carDirection === 'East')) {
     distance = data.xAxis;
     clearInterval(count);
-    count = setInterval(movingEast, 16);
+    count = setInterval(move, 16);
   } else if (data.carMoving === true && (event.key === 'ArrowLeft' || data.carDirection === 'West')) {
     clearInterval(count);
     distance = data.xAxis;
-    count = setInterval(movingWest, 16);
+    count = setInterval(move, 16);
   } else if (data.carMoving === true && (event.key === 'ArrowDown' || data.carDirection === 'South')) {
     clearInterval(count);
     distance = data.yAxis;
-    count = setInterval(movingNorth, 16);
+    count = setInterval(move, 16);
   } else if (data.carMoving === true && (event.key === 'ArrowUp' || data.carDirection === 'North')) {
     clearInterval(count);
     distance = data.yAxis;
-    count = setInterval(movingSouth, 16);
+    count = setInterval(move, 16);
   }
 }
 
-function movingEast() {
-  $car.style.top = data.yAxis + 'px';
-  $car.style.left = (parseInt(data.xAxis) + parseInt(5)) + 'px';
-  distance = distance + 5;
-  data.xAxis = distance;
-}
-
-function movingWest() {
-  $car.style.top = data.yAxis + 'px';
-  $car.style.left = (parseInt(data.xAxis) - parseInt(5)) + 'px';
-  distance = distance - 5;
-  data.xAxis = distance;
-}
-
-function movingNorth() {
-  $car.style.left = data.xAxis + 'px';
-  $car.style.top = (parseInt(data.yAxis) + parseInt(5)) + 'px';
-  distance = distance + 5;
-  data.yAxis = distance;
-}
-
-function movingSouth() {
-  $car.style.left = data.xAxis + 'px';
-  $car.style.top = (parseInt(data.yAxis) - parseInt(5)) + 'px';
-  distance = distance - 5;
-  data.yAxis = distance;
+function move() {
+  var a = 5;
+  if (data.carDirection === 'West' || data.carDirection === 'East') {
+    if (data.carDirection === 'West') {
+      a = -5;
+    }
+    $car.style.top = data.yAxis + 'px';
+    $car.style.left = (parseInt(data.xAxis) + a) + 'px';
+    distance = distance + a;
+    data.xAxis = distance;
+  } else if (data.carDirection === 'North' || data.carDirection === 'South') {
+    if (data.carDirection === 'North') {
+      a = -5;
+    }
+    $car.style.left = data.xAxis + 'px';
+    $car.style.top = (parseInt(data.yAxis) + a) + 'px';
+    distance = distance + a;
+    data.yAxis = distance;
+  }
 }
