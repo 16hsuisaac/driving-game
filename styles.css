@@ -6,18 +6,18 @@ body {
   width: 15%;
 }
 
-.up-arrow {
-  transform: rotate(1 turn);
-}
-
 .right-arrow {
-  transform: rotate(0.25 turn);
+  transform: rotate(1turn);
 }
 
 .down-arrow {
-  transform: rotate(0.5 turn);
+  transform: rotate(0.25turn);
 }
 
 .left-arrow {
-  transform: rotate(0.75 turn);
+  transform: rotate(0.5turn);
+}
+
+.up-arrow {
+  transform: rotate(0.75turn);
 }
