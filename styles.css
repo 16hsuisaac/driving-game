@@ -4,6 +4,8 @@ body {
 
 .car-image {
   width: 15%;
+  position: relative;
+  left: 1px;
 }
 
 .right-arrow {
