@@ -4,20 +4,25 @@ body {
 
 .car-image {
   width: 15%;
+  position: absolute;
+  left: 1px;
 }
 
 .right-arrow {
-  transform: rotate(1turn);
+  transition-duration: 0.5s;
 }
 
 .down-arrow {
   transform: rotate(0.25turn);
+  transition-duration: 0.5s;
 }
 
 .left-arrow {
   transform: rotate(0.5turn);
+  transition-duration: 0.5s;
 }
 
 .up-arrow {
-  transform: rotate(0.75turn);
+  transform: rotate(-0.25turn);
+  transition-duration: 0.5s;
 }
