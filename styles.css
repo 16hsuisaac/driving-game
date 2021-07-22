@@ -5,3 +5,19 @@ body {
 .car-image {
   width: 15%;
 }
+
+.right-arrow {
+  transform: rotate(1turn);
+}
+
+.down-arrow {
+  transform: rotate(0.25turn);
+}
+
+.left-arrow {
+  transform: rotate(0.5turn);
+}
+
+.up-arrow {
+  transform: rotate(0.75turn);
+}
