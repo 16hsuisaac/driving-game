@@ -3,26 +3,20 @@ body {
 }
 
 .car-image {
-  width: 15%;
+  width: 100px;
   position: absolute;
   left: 1px;
-}
-
-.right-arrow {
-  transition-duration: 0.5s;
+  transform-origin: center;
 }
 
 .down-arrow {
   transform: rotate(0.25turn);
-  transition-duration: 0.5s;
 }
 
 .left-arrow {
   transform: rotate(0.5turn);
-  transition-duration: 0.5s;
 }
 
 .up-arrow {
   transform: rotate(-0.25turn);
-  transition-duration: 0.5s;
 }
